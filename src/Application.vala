@@ -1,3 +1,7 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: 2021 Colin Kiama <colinkiama@email.com>
+ */
 public class MyApp : Gtk.Application {
     public MyApp () {
         Object (
