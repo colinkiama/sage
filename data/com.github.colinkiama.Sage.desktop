@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=sage
+GenericName=sage App
+Comment=Vala Learning Environment
+Categories=Development;Education;Utility;
+Exec=com.github.colinkiama.Sage
+Icon=com.github.colinkiama.Sage
+Terminal=false
+Type=Application
+Keywords=vala;sage;learn;program;programming;language;coding;lang;purple;v;
