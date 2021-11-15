@@ -7,11 +7,20 @@ public class MyApp : Gtk.Application {
     }
 
     protected override void activate () {
+        var button_hello = new Gtk.Button.with_label ("Click me!") {
+            margin = 12
+        };
+
         var main_window = new Gtk.ApplicationWindow (this) {
             default_height = 300,
             default_width = 300,
             title = "Hello World"
         };
+
+        button_hello.clicked.connect (() => {
+            button_hello.label = "Hello World!";
+            button_hello.sensitive = false;
+        });
 
         var gtk_settings = Gtk.Settings.get_default ();
         var granite_settings = Granite.Settings.get_default ();
@@ -25,6 +34,8 @@ public class MyApp : Gtk.Application {
                 granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
             );
         });
+
+        main_window.add (button_hello);
 
         main_window.show_all ();
     }
